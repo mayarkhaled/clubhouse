@@ -1,0 +1,31 @@
+body {
+  min-height: 100vh;
+  scroll-behavior: smooth;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: Roboto, Arial, Helvetica, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+body {
+  background-color: rgb(66, 65, 65);
+  color: #fff;
+}
+form{
+  padding: 5px;
+}
+.messagediv{
+  background-color: rgb(39, 38, 38);
+  margin-top: 5px;
+  width: 15em;
+  
+}
+p{
+  font-style: italic;
+}
+.h{
+  text-align: center;
+}

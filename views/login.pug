@@ -1,0 +1,13 @@
+extends layout
+
+block content
+    h1  #{title}
+
+    form(action=""  method = "POST")
+        label(for="username") Email 
+        input#name.form-control(type="email" placeholder = "email", name = "email")
+        br
+        label(for="password") password 
+        input#password.form-control(type="password" placeholder = "password", name = "password")
+        br
+        button(type="submit") Login

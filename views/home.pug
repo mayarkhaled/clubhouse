@@ -1,0 +1,28 @@
+extends layout
+
+block content
+  h1(class = "h") Welcome to club house
+  if(user == undefined)
+    a(href="users/signup") Create new account
+    br
+    a(href="users/login") Log in
+    
+  else
+    a(href="users/logout") Log out  
+    br
+    if(user.member == false)
+        a(href="home/membership") join the club
+    a(href="/home/newpost") Send new message
+  dl
+    each post in posts
+        dt
+            div.messagediv 
+                p #{post.message} 
+                if(user != undefined) 
+                    if(user.member)
+                        p #{post.user.fullname}
+                p #{post.date}
+    else
+        li There are no posts            
+ 
+  

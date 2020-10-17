@@ -1,0 +1,8 @@
+extends layout
+
+block content
+    form(action="/home/verifyMembership" method = "post" )
+        label(for="secret")
+        input(type="text" name = "secretcode")
+        button(type="submit") Join our club
+  
