@@ -1,9 +1,6 @@
-var mongoose = require('mongoose');
-var async = require('async');
-const { body,validationResult , check} = require("express-validator");
+const { body,validationResult } = require("express-validator");
 const User = require('../models/user');
 const post = require('../models/post');
-const { locals } = require('../app');
 let currentUser = new User();
 
 exports.home = function(req , res , next){
@@ -17,18 +14,18 @@ exports.home = function(req , res , next){
         });
 }
 
-exports.membership = function(req , res , next){
+exports.membership = function(req , res ){
    res.render('membership',{});
 }
-exports.verifyMembership = function(req , res , next){
+exports.verifyMembership = function(req , res ){
    if(req.body.secretcode == 'mayar'){
-    let r =  update_membership();
+      update_membership();
     res.redirect('/home');
  }
 
 }
 
-exports.newpost_get = function(req , res , next){
+exports.newpost_get = function(req , res ){
     res.render('newpost')
 }
 exports.newpost_post = [

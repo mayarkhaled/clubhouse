@@ -1,17 +1,11 @@
-var mongoose = require('mongoose');
-var async = require('async');
-//passport
-const session = require("express-session");
-const passport = require("passport");
 //models
 var user = require('../models/user');
 //validator
 const { body,validationResult , check} = require("express-validator");
 //bcrypt
 const bcrypt = require('bcryptjs');
-const { Passport } = require('passport');
 
-exports.signup_get = function(req , res ,next){
+exports.signup_get = function(req , res ){
     res.render('signup' , {title : 'Create new account '});
 }
 
@@ -57,7 +51,7 @@ exports.signup_post = [
     }    
 ]
 
-exports.login_get = function(req , res , next){
+exports.login_get = function(req , res ){
     res.render('login' , {title : "Log-in"})
 }
 
@@ -70,7 +64,7 @@ exports.login_post = [
     
 ]
 
-exports.log_out = function(req , res , next){
+exports.log_out = function(req , res ){
     req.logout();
     res.redirect('/home');
 }

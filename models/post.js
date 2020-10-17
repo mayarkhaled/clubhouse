@@ -13,6 +13,6 @@ post_schema.virtual('url').get(function(){
 });
 
 post_schema.virtual('date').get(function(){
-    return DateTime.fromJSDate(this.timestamp).toLocaleString(DateTime.DATE_MED);
+    return DateTime.fromJSDate(this.timestamp).toLocaleString(DateTime.DATE_MED);   
 })
 module.exports = mongoose.model('post' , post_schema);

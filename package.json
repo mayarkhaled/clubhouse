@@ -8,6 +8,7 @@
     "serverstart": "DEBUG=express-locallibrary-tutorial:* npm run devstart"
   },
   "devDependencies": {
+    "eslint": "^7.11.0",
     "nodemon": "^2.0.5"
   },
   "dependencies": {
